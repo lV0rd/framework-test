@@ -164,37 +164,6 @@ function loader.LoadChildren(folder : Folder) : {string : {any}}
 	return t
 end
 
--- Credit: @Quenty
-function loader.Maid()
-	return Maid.new()
-end
-
--- Credit: @Quenty
-function loader.Signal()
-	return Signal.new()
-end
-
--- Credit: @loleris
-function loader.NewInstance(class : string, properties : {string : any})
-	local instance = Instance.new(class)
-	for k, v in pairs(properties) do
-		if k ~= "Parent" then
-			instance[k] = v
-		end
-	end
-	instance.Parent = properties.Parent or workspace
-	return instance
-end
-
-function loader.SafeTableRemove(tbl : {any}, element : any)
-	local index = table.find(tbl, element)
-	if index ~= nil then
-		table.remove(tbl, index)
-		return true
-	end
-	return false
-end
-
 function loader.DeepCopy(original : {any})
 	local copy = {}
 	for k, v in pairs(original) do
@@ -266,6 +235,6 @@ function loader.test.RunTests()
 	print("--- Test End ----")
 end
 
-_G.Get = loader.Get
+shared.Get = loader.Get
 
 return loader
