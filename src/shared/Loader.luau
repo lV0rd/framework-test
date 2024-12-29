@@ -26,12 +26,11 @@ if RunService:IsClient() then
 end
 
 ---- Utils ----
-local Utils = ReplicatedStorage.Modules.Shared
-local Maid = require(Utils.Maid)
-local Signal = require(Utils.Signal)
-local Spring = require(Utils.Spring)
+local Utils = ReplicatedStorage.Shared
+local Maid = require(Utils.maid)
+local Signal = require(Utils.signal)
 
-loader.Component = require(Utils.Component)
+loader.Component = require(Utils.component)
 
 ---- EVENTS ----
 loader.OnComplete = Signal.new()
@@ -173,11 +172,6 @@ end
 -- Credit: @Quenty
 function loader.Signal()
 	return Signal.new()
-end
-
-
-function loader.Spring(...)
-	return Spring.new(...)
 end
 
 -- Credit: @loleris
