@@ -13,10 +13,11 @@ Component.__index = Component
 
 --> Variables
 local SharedModules = ReplicatedStorage.Shared
+local Packages = ReplicatedStorage.Packages
 
 --> References
 local Utils = {
-	Maid = require(SharedModules.Maid);
+	Maid = require(Packages.Maid);
 }
 
 --> Constructor

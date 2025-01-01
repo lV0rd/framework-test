@@ -4,11 +4,14 @@ player.__index = player
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerScriptService = game:GetService("ServerScriptService")
 local ServerStorage = game:GetService("ServerStorage")
+
 local Modules = ReplicatedStorage.Shared
+local Packages = ReplicatedStorage.Packages
+
 local Classes = script.Parent
 local Data = require(Classes.Data)
 
-local Maid = require(Modules.Maid)
+local Maid = require(Packages.Maid)
 
 function player.new(Player: Player, characterAddedCallback : ((Character : Model) -> ())?, characterDiedCallback : ((Character : Model, Humanoid : Humanoid) -> ())?)
 	local self = setmetatable({}, player)

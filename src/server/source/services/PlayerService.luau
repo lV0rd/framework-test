@@ -15,11 +15,12 @@ local Red = require(ReplicatedStorage.Red)
 local Events = Signals.Server
 --]]
 local SharedModules = ReplicatedStorage.Shared
-local ServerModules = script.modules
+local Packages = ReplicatedStorage.Packages
+local ServerModules = ServerStorage.Source.modules
 
 --> References
 local Utils = {
-	Maid = require(SharedModules.Maid);
+	Maid = require(Packages.Maid);
 }
 
 local playerClass = require(ServerModules.classes.Player)

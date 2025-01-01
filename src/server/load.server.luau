@@ -1,8 +1,8 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerStorage = game:GetService("ServerStorage")
 
-local Services = script.services
-local Components = script.components
+local Services = ServerStorage.Source.services
+local Components = ServerStorage.Source.components
 local Shared = ReplicatedStorage.Shared
 
 local Loader = require(Shared.Loader)

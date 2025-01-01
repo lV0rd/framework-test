@@ -26,11 +26,12 @@ if RunService:IsClient() then
 end
 
 ---- Utils ----
-local Utils = ReplicatedStorage.Shared
-local Maid = require(Utils.maid)
-local Signal = require(Utils.signal)
+local Utils = ReplicatedStorage.Packages
+local Shared = ReplicatedStorage.Shared
 
-loader.Component = require(Utils.component)
+local Signal = require(Utils.GoodSignal)
+
+loader.Component = require(Shared.Component)
 
 ---- EVENTS ----
 loader.OnComplete = Signal.new()
@@ -92,7 +93,7 @@ end
 
 function loader.InitModules(root : {any}?)
 	local start = os.time()
-	if (type(root) ~= "table") then
+	if type(root) ~= "table" then
 		root = root:GetChildren()
 	end
 
@@ -109,7 +110,7 @@ end
 
 function loader.InitModulesInOrder(root : {ModuleScript}?)
 	local start = os.time()
-	if (type(root) ~= "table") then
+	if type(root) ~= "table" then
 		error("Root must be a table of modulescripts! {ModuleScript}")
 	end
 

@@ -2,9 +2,9 @@ local module = {}
 
 --> Services
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local HttpService = game:GetService("HttpService")
-local RunService = game:GetService("RunService")
-local Players = game:GetService("Players")
+local _HttpService = game:GetService("HttpService")
+local _RunService = game:GetService("RunService")
+local _Players = game:GetService("Players")
 
 --> Variables
 --[[
@@ -13,15 +13,18 @@ local Red = require(ReplicatedStorage.Red)
 local Events = Signals.Client
 --]]
 
+local Source = ReplicatedStorage.Source
+
 local SharedModules = ReplicatedStorage.Shared
-local ClientModules = script.modules
+local Packages = ReplicatedStorage.Packages
+local _ClientModules = Source.modules
 
 --> References
-local Utils = {
-	Maid = require(SharedModules.Maid);
+local _Utils = {
+	Maid = require(Packages.Maid);
 }
 --> Private Functions
-function example()
+function _example()
 	
 end
 

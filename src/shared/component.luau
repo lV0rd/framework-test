@@ -1,14 +1,9 @@
-local SETTINGS = {
-	DebugMessages = true
-}
-
 local ComponentManager = {
 
 }
 
 ----- Loaded Services -----
 local CollectionService = game:GetService("CollectionService")
-local RunService = game:GetService("RunService")
 
 ----- Private variables -----
 local Children = {}
@@ -34,12 +29,12 @@ local function load(source)
 		end
 
 		local function component_removed(item)
-			local component = babies[item]
+			local c = babies[item]
 
-			if component ~= nil then
-				if component.Destroy ~= nil then
-					component:_cleanup()
-					component:Destroy()
+			if c ~= nil then
+				if c.Destroy ~= nil then
+				 c:_cleanup()
+				 c:Destroy()
 				end
 				babies[item] = nil
 			end

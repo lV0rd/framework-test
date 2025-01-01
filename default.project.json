@@ -6,14 +6,29 @@
     "ReplicatedStorage": {
       "$ignoreUnknownInstances": true,
       
+      "Source": {
+        "$path": "src/client/source"
+      },
+
       "Shared": {
         "$path": "src/shared"
+      },
+
+      "Packages": {
+        "$path": "Packages"
       }
+    },
+
+    "ServerStorage": {
+      "Source": {
+        "$path": "src/server/source"
+      },
+      "$ignoreUnknownInstances": true
     },
 
     "ServerScriptService": {
       "Server": {
-        "$path": "src/server"
+        "$path": "src/server/load.server.luau"
       },
       "$ignoreUnknownInstances": true
     },
@@ -21,17 +36,9 @@
     "StarterPlayer": {
       "StarterPlayerScripts": {
         "Client": {
-          "$path": "src/client"
+          "$path": "src/client/load.client.luau"
         }
       },
-      "$ignoreUnknownInstances": true
-    },
-
-    "Workspace": {
-      "$properties": {
-        "FilteringEnabled": true
-      },
-
       "$ignoreUnknownInstances": true
     }
   }
