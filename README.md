@@ -2,7 +2,7 @@
 This framework consists of services for the server and controllers for the client
 with networking supported by Red (credit to: red-blox project)
 
-Every service/controller has two methods: module:Init() and module:Start()
+Every service/controller has two functions: module.Init() and module.Start()
 
 They should be structured like this:
 ```lua
