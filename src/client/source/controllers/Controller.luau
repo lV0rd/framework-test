@@ -8,9 +8,8 @@ local _Players = game:GetService("Players")
 
 --> Variables
 --[[
-local Signals = ReplicatedStorage.Signals
-local Red = require(ReplicatedStorage.Red)
-local Events = Signals.Client
+local Red = require(ReplicatedStorage.Packages.Red)
+local Events = ReplicatedStorage.Events
 --]]
 
 local Source = ReplicatedStorage.Source

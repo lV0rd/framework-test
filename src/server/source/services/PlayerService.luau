@@ -10,9 +10,8 @@ local Players = game:GetService("Players")
 
 --> Variables
 --[[
-local Signals = ReplicatedStorage.Signals
-local Red = require(ReplicatedStorage.Red)
-local Events = Signals.Server
+local Red = require(ReplicatedStorage.Packages.Red)
+local Events = ReplicatedStorage.Events
 --]]
 local SharedModules = ReplicatedStorage.Shared
 local Packages = ReplicatedStorage.Packages
