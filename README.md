@@ -9,12 +9,12 @@ They should be structured like this:
 --> Constructor
 local module = {}
 
---> Define initialize method
+--> Define initialize function
 function module.Init()
 
 end
 
---> Define start method
+--> Define start function
 function module.Start()
 
 end
@@ -52,6 +52,7 @@ function Component.new()
 	return self
 end
 
+--> Define init method
 function Component:init()
     if self._initialized == true then return end
 	self._initialized = true
