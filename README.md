@@ -72,3 +72,7 @@ end
 Packages are managed through Wally, to add a new package, go to wally.toml and add it in the dependencies
 
 Packages are stored in replicatedStorage, both client scripts and server scripts have access to them.
+
+# Loader methods
+
+The loader comes with a lot of methods that can be useful during development.
